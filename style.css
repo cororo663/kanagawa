@@ -1,0 +1,299 @@
+/* 全体 */
+* {
+    /* box-sizing: border-box; */
+    margin: 0;
+    color: #fff;
+}
+
+body {
+    font-family: Arial, "Noto Sans JP", sans-serif;
+    color: #000000;
+    /* background: #28282c; */
+    line-height: 1.8;
+    background-color: rgb(6, 5, 13);
+    overflow-x: hidden;
+}
+
+
+/* ヘッダー */
+.header {
+    height: 80px;
+    padding: 0 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 24px;
+    
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* メインビジュアル */
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+    background: #ffffff;
+
+    background-image: url("syasin/minatomirai.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+.hero-text p {
+    letter-spacing: 3px;
+    color: #ddd;
+}
+
+.hero h2 {
+    font-size: 56px;
+    line-height: 1.4;
+    margin: 20px 0 40px;
+    color: #ffffff;
+    padding-top: 160px;
+}
+
+
+/* ボタン */
+/* .button {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    text-decoration: none;
+}
+ */
+
+.button {
+    position: relative;
+    top: -30px;
+    display: inline-block;
+    padding: 12px 30px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 80px;
+    margin-top: 80px;
+}
+
+/* 共通セクション */
+.about,
+.spot {
+    /* padding: 120px 10%; */
+    text-align: center;
+}
+
+.section-label {
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+    color: #fff;
+    font-size: 28px;
+    padding-top: 100px;
+}
+
+.about h2,
+.spot h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+
+/* スポット */
+.spot-list {
+    max-width: 1100px;
+    margin: 60px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.spot-card {
+    
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #181625;
+}
+
+.image-placeholder {
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+
+/* 2ページ目タイトル */
+.page-title {
+    display: flex;
+    justify-content: center; 
+    align-items: center;   
+    height: 450px;         
+    padding: 150px 10%;
+    text-align: center;
+    background: #e8f7fa;
+    background-repeat: no-repeat;
+    background-image: url("/syasin/pengin.JPG");
+    object-fit: cover;
+
+    background-position:  center;
+    background-size: cover;
+}
+
+.guide-imags {
+    width: 80%;
+    max-width: 1000px;
+    height: 400px;
+    margin: 50px auto 0;
+    overflow: hidden;
+}
+
+.guide-imags img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.page-title h2 {
+    font-size: 48px;
+    margin: 20px 0;
+    color: #cb0c0c;
+}
+
+
+/* 魅力紹介 */
+.feature {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0 5%;
+
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.feature.reverse {
+    flex-direction: row-reverse;
+}
+
+.feature-image {
+    height: 400px;
+    background: #dceff2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-text {
+    width: 50%;
+}
+
+.feature-text h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.recommend {
+    margin-top: 30px;
+}
+
+
+/* HOMEへ */
+.back-home {
+    padding: 20px;
+    text-align: center;
+
+}
+
+
+/* フッター */
+.footer {
+    padding: 40px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+
+/* スマホ */
+@media (max-width: 768px) {
+
+    .header {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+
+    background-image: url("syasin/minatomirai.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+    .hero h2 {
+        font-size: 38px;
+    }
+
+    .spot-list {
+        grid-template-columns: 1fr;
+    }
+
+    .feature,
+    .feature.reverse {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .feature-image,
+    .feature-text {
+        width: 100%;
+    }
+
+    .page-title h2 {
+        font-size: 36px;
+    }
+}
+
+.image-placeholder img{
+    transition: transform 0.3s ease;
+}
+.image-placeholder:hover img {
+    transform: scale(1.05);
+}
