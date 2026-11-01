@@ -163,7 +163,7 @@ a {
     text-align: center;
     background: #e8f7fa;
     background-repeat: no-repeat;
-    background-image: url("/syasin/pengin.JPG");
+    background-image: url("syasin/pengin.JPG");
     object-fit: cover;
 
     background-position:  center;
